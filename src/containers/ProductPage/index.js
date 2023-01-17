@@ -42,7 +42,7 @@ const ViewProduct = () => {
 
 
     useEffect(() => {
-        dispatch(fetchProducts());
+        dispatch(fetchProducts(6));
         dispatch(fetchCategories());
         setTotal(product.products.length)
         // eslint-disable-next-line
