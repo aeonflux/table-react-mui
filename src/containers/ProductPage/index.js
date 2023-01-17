@@ -16,6 +16,7 @@ import Stack from '@mui/material/Stack';
 import Rating from '@mui/material/Rating';
 import CircularProgress from '@mui/material/CircularProgress';
 import Box from '@mui/material/Box';
+import Grid from '@mui/material/Grid';
 import DeletePrompt from '../../components/DeletePrompt';
 import ExpandableTableRow from '../../components/ExpandableTableRow';
 import {
@@ -176,9 +177,11 @@ const ViewProduct = () => {
                     {
                         product.isLoadingProducts ?
                             <TableBody>
-                                <Stack alignItems="center">
-                                    <CircularProgress />
-                                </Stack>
+                                <TableRow sx={{ display: 'flex', alignItems: 'center' }}>
+                                    <TableCell colSpan={5}>
+                                        <CircularProgress />
+                                    </TableCell>
+                                </TableRow>
                             </TableBody> :
                             <TableBody>
                                 {product.products.slice(-6).map((row) => (
