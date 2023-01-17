@@ -48,7 +48,6 @@ const ViewProduct = () => {
     }, []);
 
 
-
     // Load Product Prior Edit Modal
     useEffect(() => {
         if (!product.isLoadingProduct && !isOnDelete) {
@@ -61,7 +60,6 @@ const ViewProduct = () => {
     useEffect(() => {
         if (!product.isLoadingProducts && page === 1) {
             setIsOnEdit(false)
-            setTotal(product.products.length)
         }
         // eslint-disable-next-line
     }, [product.isLoadingProducts]);

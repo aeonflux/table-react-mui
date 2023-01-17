@@ -2,11 +2,9 @@ import React from 'react';
 import KeyboardDoubleArrowDownIcon from '@mui/icons-material/KeyboardDoubleArrowDown';
 import KeyboardDoubleArrowUpIcon from '@mui/icons-material/KeyboardDoubleArrowUp';
 import {
-    Fade,
     TableRow,
     TableCell,
-    IconButton,
-    Box
+    IconButton
 } from "@mui/material";
 
 const ExpandableTableRow = ({ children, expandComponent, ...otherProps }) => {
@@ -22,13 +20,11 @@ const ExpandableTableRow = ({ children, expandComponent, ...otherProps }) => {
                     </IconButton>
                 </TableCell>
             </TableRow>
-            {/* <Fade> */}
             {isExpanded && (
                 <>
                     {expandComponent}
                 </>
             )}
-            {/* </Fade> */}
         </>
     );
 };
